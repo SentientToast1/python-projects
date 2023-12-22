@@ -6,8 +6,6 @@ import time
 
 
 def BadgeFinder(GameID):
-    options = webdriver.EdgeOptions()
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Edge()
     driver.get(f"https://www.roblox.com/games/{GameID}/")
 
@@ -35,6 +33,5 @@ def BadgeFinder(GameID):
     os.system("cls")
     print(f" The badge with least number of owners is: \n {elemSorted[0][0]} : {elemSorted[0][1]} \n The badge with most number of owners is: \n {elemSorted[-1][0]} : {elemSorted[-1][1]}")
     driver.quit()
-8821374215
 
 BadgeFinder(int(input("Enter Game id: ")))
