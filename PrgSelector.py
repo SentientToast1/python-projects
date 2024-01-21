@@ -1,4 +1,4 @@
-PrgChoice = int(input("Enter Program Number"))
+PrgChoice = int(input("Enter Program Number: "))
 
 match PrgChoice:
     case 1:
