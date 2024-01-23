@@ -1,3 +1,4 @@
+print("Array Probability program")
 array=[]
 arrayLen = int(input("Enter array length: "))
 if arrayLen != 0:
