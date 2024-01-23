@@ -1,5 +1,6 @@
 import random as rng
 
+print("Mark List program")
 lis = []
 p = 0
 f = 0
