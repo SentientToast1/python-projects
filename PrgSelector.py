@@ -1,12 +1,13 @@
 PrgChoice = int(input("Enter Program Number: "))
-
+choice = ""
 match PrgChoice:
     case 1:
-        with open("PyScripts\MarkList.py") as prg:
-            exec(prg.read())
+        choice = "ArrayProbability.py"
     case 2:
-        with open("PyScripts\ArrayProbability.py") as prg:
-            exec(prg.read())
-    case 3:
-        with open("PyScripts\Gacha.py") as prg:
-            exec(prg.read())    
+         choice = "MarkList.py"
+    case 3:   
+         choice = "Gacha.py"
+
+1
+with open(f"Pyscripts/{choice}") as prg:
+    exec(prg.read())

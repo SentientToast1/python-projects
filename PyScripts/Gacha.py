@@ -33,7 +33,8 @@ class Gacha:
             print(self.pity_counter)
             print("No items found!")
 
-print("Gacha Program")
+print("-----Gacha Program-----")
+print("")
 itemList = [
     {"name":"Soldier's Sword","rarity":"common"},
     {"name":"Colosseum Mace","rarity":"common"},

@@ -1,6 +1,7 @@
 import random as rng
 
-print("Mark List program")
+print("-----Mark List Program-----")
+print("")
 lis = []
 p = 0
 f = 0

@@ -1,4 +1,5 @@
-print("Array Probability program")
+print("-----Array Probability Program-----")
+print("")
 array=[]
 arrayLen = int(input("Enter array length: "))
 if arrayLen != 0:
