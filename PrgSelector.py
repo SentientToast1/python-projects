@@ -1,13 +1,19 @@
-PrgChoice = int(input("Enter Program Number: "))
-choice = ""
-match PrgChoice:
-    case 1:
-        choice = "ArrayProbability.py"
-    case 2:
-         choice = "MarkList.py"
-    case 3:   
-         choice = "Gacha.py"
 
-1
-with open(f"Pyscripts/{choice}") as prg:
+Programs = {
+    1 : "ArrayProbability.py",
+    2 : "MarkList.py",
+    3 : "Gacha.py"
+    
+}
+print("| Sr.no | Name")
+for i in Programs:
+    print(f"|   {i}   | {Programs[i]}")
+print()
+
+choice = len(Programs) + 1
+while choice > len(Programs): 
+    choice = int(input("Enter Program Number: "))
+    print("Wrong number")
+with open(f"Pyscripts/{Programs[choice]}") as prg:
     exec(prg.read())
+
