@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
-from colorama import Fore, Back
+from color import colors
 import os
 import time
 
@@ -38,8 +38,8 @@ def BadgeFinder(GameID):
 
     elemSorted = sorted(elemValue, key=lambda x: x[1])
     os.system("cls")
-    print(Fore.RED + f" The badge with least number of owners is: \n {elemSorted[0][0]} : {elemSorted[0][1]}")
-    print(Fore.GREEN + f"The badge with most number of owners is: \n {elemSorted[-1][0]} : {elemSorted[-1][1]}")
+    print(colors.red , f" The badge with least number of owners is: \n {elemSorted[0][0]} : {elemSorted[0][1]}")
+    print(colors.green , f"The badge with most number of owners is: \n {elemSorted[-1][0]} : {elemSorted[-1][1]}")
     driver.quit()
 
 BadgeFinder(int(input("Enter Game id: ")))

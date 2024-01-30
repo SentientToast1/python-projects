@@ -1,13 +1,13 @@
-
+from color import colors
 Programs = {
     1 : "ArrayProbability.py",
     2 : "MarkList.py",
     3 : "Gacha.py"
     
 }
-print("| Sr.no | Name")
+print(colors.cyan,"| Sr.no | Name")
 for i in Programs:
-    print(f"|   {i}   | {Programs[i]}")
+    print(colors.cyan,f"|   {i}   | {Programs[i]}")
 print()
 
 choice = len(Programs) + 1
