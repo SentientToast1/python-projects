@@ -1,12 +1,19 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
+from selenium.webdriver.edge.options import Options
+from colorama import Fore, Back
 import os
 import time
 
 
 def BadgeFinder(GameID):
-    driver = webdriver.Edge()
+    opt = Options()
+    opt.add_argument("--headless=new")
+
+
+    driver = webdriver.Edge(options=opt)
+    
     driver.get(f"https://www.roblox.com/games/{GameID}/")
 
     def buttonExists():
@@ -31,7 +38,8 @@ def BadgeFinder(GameID):
 
     elemSorted = sorted(elemValue, key=lambda x: x[1])
     os.system("cls")
-    print(f" The badge with least number of owners is: \n {elemSorted[0][0]} : {elemSorted[0][1]} \n The badge with most number of owners is: \n {elemSorted[-1][0]} : {elemSorted[-1][1]}")
+    print(Fore.RED + f" The badge with least number of owners is: \n {elemSorted[0][0]} : {elemSorted[0][1]}")
+    print(Fore.GREEN + f"The badge with most number of owners is: \n {elemSorted[-1][0]} : {elemSorted[-1][1]}")
     driver.quit()
 
 BadgeFinder(int(input("Enter Game id: ")))
