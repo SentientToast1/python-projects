@@ -1,16 +1,16 @@
 
 while True:
     bin = input("Enter binary: ")
-    count = 0
     for x in bin:
+        y = True
         if x == '0' or x == '1':
-            count = 0
+            pass
         else:
-            count += 1
-    if count != 0:
-        print("incorrect")
-    else:
+            y = False
+    if y:
         break
+    else:
+        print("incorrect")
 
 
 
