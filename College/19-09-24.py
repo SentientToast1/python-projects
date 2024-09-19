@@ -44,14 +44,38 @@ def pgm2():
     print(f"there are {countPrime} Prime numbers and {len(numList)-countPrime} composite numbers")
     print(f"list of primes: {primeList}" )
     print(f"list of composites: {compList}")
+
+def pgm3():
+    opListStr = input("enter numbers separated by comma: ")
+    opList=opListStr.split(',')
+    opList = list(map(int,opList))
+    newList=[]
+    flag = False
+
+    for i in opList:
+        if i == -1:
+            flag = True
+            newList.append(i)
+            break
+        else:
+            newList.append(i)
     
+    if flag:
+        print("-1 was found")
+        print(newList)
+    else:
+        print("-1 was not found")
+        print(newList)
+        
     
     
 prgSelector = input()
 
-if prgSelector == 0:
+if prgSelector == '0':
     pgm1()
-elif prgSelector == 1:
+elif prgSelector == '1':
     pgm2()
+elif prgSelector == '2':
+    pgm3()
 else:
     exit(0)
