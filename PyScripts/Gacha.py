@@ -45,7 +45,8 @@ itemList = [
     {"name":"Spartan Spear","rarity":"rare"},
     {"name":"Gold Halberd","rarity":"rare"},
     {"name":"Excalibur","rarity":"legendary"},
-    {"name":"Red Scythe","rarity":"legendary"}
+    {"name":"Red Scythe","rarity":"legendary"},
+    
 ]
 
 GachaSystem = Gacha(itemList)
