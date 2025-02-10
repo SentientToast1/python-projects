@@ -9,7 +9,6 @@ def enterPlayer():
 
 while input("Add player? y/n ") != "n":
     enterPlayer()
-
 def playGame():
     pool = 0
     bet = []
@@ -27,5 +26,15 @@ def playGame():
         guesses[guesses.index(y)] = abs(y-ans)
     print(guesses)
     cash[guesses.index(min(guesses))] += pool
-    
-playGame()
+
+
+
+
+
+rounds = int(input("Enter number of rounds: "))
+print('____Game Start____') 
+while rounds > 0:
+
+    playGame()
+    print('_____Next round_____')
+    rounds -= 1
